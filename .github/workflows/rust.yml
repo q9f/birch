@@ -43,47 +43,16 @@ jobs:
         with:
           command: check
       - name: Make Test-All
-        run: make test-all
-
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Sources
-        uses: actions/checkout@v2
-      - name: Install toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-      - name: Rust Cache
-        uses: Swatinem/rust-cache@v1.3.0
-      - name: Install Clippy
-        run: rustup component add clippy
-      - name: Install RustFmt
-        run: rustup component add rustfmt
-      - name: Run Linters
-        run: make lint
-
-  audit:
-    name: Audit
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Sources
-        uses: actions/checkout@v2
-      - name: Install Toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-      - name: Rust Cache
-        uses: Swatinem/rust-cache@v1.3.0
-      - name: Install Audit
-        run: cargo install cargo-audit
-      - name: Run Audit
-        uses: actions-rs/cargo@v1
-        with:
-          command: audit
+        run: |
+          export RUST_TEST_THREADS=$(nproc)
+          git submodule update --init
+          cargo test --release --all --exclude serialization_tests --exclude conformance_tests --exclude forest_message --exclude forest_crypto -- --test-threads=$(RUST_TEST_THREADS)
+          cargo test --release -p forest_crypto --features blst --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
+          cargo test --release -p forest_crypto --features pairing --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
+          cargo test --release -p forest_message --features blst --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
+          cargo test --release -p forest_message --features pairing --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
+          cargo test --release --manifest-path=tests/serialization_tests/Cargo.toml --features "submodule_tests" -- --test-threads=$(RUST_TEST_THREADS)
+          cargo test --release --manifest-path=tests/conformance_tests/Cargo.toml --features "submodule_tests" -- --nocapture --test-threads=$(RUST_TEST_THREADS)
 
   build:
     name: Build
