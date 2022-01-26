@@ -46,13 +46,13 @@ jobs:
         run: |
           export RUST_TEST_THREADS=$(nproc)
           git submodule update --init
-          cargo test --release --all --exclude serialization_tests --exclude conformance_tests --exclude forest_message --exclude forest_crypto -- --test-threads=$(RUST_TEST_THREADS)
-          cargo test --release -p forest_crypto --features blst --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
-          cargo test --release -p forest_crypto --features pairing --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
-          cargo test --release -p forest_message --features blst --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
-          cargo test --release -p forest_message --features pairing --no-default-features -- --test-threads=$(RUST_TEST_THREADS)
-          cargo test --release --manifest-path=tests/serialization_tests/Cargo.toml --features "submodule_tests" -- --test-threads=$(RUST_TEST_THREADS)
-          cargo test --release --manifest-path=tests/conformance_tests/Cargo.toml --features "submodule_tests" -- --nocapture --test-threads=$(RUST_TEST_THREADS)
+          cargo test --release --all --exclude serialization_tests --exclude conformance_tests --exclude forest_message --exclude forest_crypto -- --test-threads=$RUST_TEST_THREADS
+          cargo test --release -p forest_crypto --features blst --no-default-features -- --test-threads=$RUST_TEST_THREADS
+          cargo test --release -p forest_crypto --features pairing --no-default-features -- --test-threads=$RUST_TEST_THREADS
+          cargo test --release -p forest_message --features blst --no-default-features -- --test-threads=$RUST_TEST_THREADS
+          cargo test --release -p forest_message --features pairing --no-default-features -- --test-threads=$RUST_TEST_THREADS
+          cargo test --release --manifest-path=tests/serialization_tests/Cargo.toml --features "submodule_tests" -- --test-threads=$RUST_TEST_THREADS
+          cargo test --release --manifest-path=tests/conformance_tests/Cargo.toml --features "submodule_tests" -- --nocapture --test-threads=$RUST_TEST_THREADS
 
   build:
     name: Build
