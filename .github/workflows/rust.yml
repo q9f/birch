@@ -29,6 +29,8 @@ jobs:
               autoconf automake cmake libtool libcurl4-openssl-dev libssl-dev llvm\
               libelf-dev libdw-dev binutils-dev zlib1g-dev libiberty-dev wget \
               xz-utils pkg-config python libclang-6.0-dev clang ocl-icd-opencl-dev libgflags-dev libhwloc-dev
+          protoc --version
+          which protoc
       - name: Checkout Sources
         uses: actions/checkout@v2
       - name: Install Toolchain
