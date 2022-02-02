@@ -23,7 +23,7 @@ dependencies = [
  "forest_json_utils",
  "forest_vm",
  "ipld_blockstore",
- "libp2p 0.40.0-rc.1",
+ "libp2p 0.40.0",
  "serde",
 ]
 
@@ -1049,7 +1049,7 @@ dependencies = [
  "ipld_blockstore",
  "ipld_hamt 2.0.0",
  "lazy_static",
- "libp2p 0.40.0-rc.1",
+ "libp2p 0.40.0",
  "log",
  "lru 0.7.2",
  "message_pool",
@@ -1961,7 +1961,7 @@ dependencies = [
  "merkletree",
  "once_cell",
  "rand 0.7.3",
- "rand_xorshift",
+ "rand_xorshift 0.2.0",
  "rayon",
  "serde",
  "serde_json",
@@ -2274,7 +2274,7 @@ dependencies = [
  "ipld_blockstore",
  "ipld_hamt 2.0.0",
  "lazy_static",
- "libp2p 0.40.0-rc.1",
+ "libp2p 0.40.0",
  "log",
  "num-derive",
  "num-traits",
@@ -2349,14 +2349,14 @@ dependencies = [
 name = "forest_bitfield"
 version = "0.1.0"
 dependencies = [
- "ahash 0.6.3",
+ "ahash 0.7.6",
  "criterion",
- "cs_serde_bytes",
- "cs_serde_cbor",
  "forest_encoding",
- "rand 0.7.3",
- "rand_xorshift",
+ "rand 0.8.4",
+ "rand_xorshift 0.3.0",
  "serde",
+ "serde_bytes",
+ "serde_cbor",
  "serde_json",
  "unsigned-varint 0.6.0",
 ]
@@ -2525,7 +2525,7 @@ dependencies = [
  "git-version",
  "ipld_blockstore",
  "lazy_static",
- "libp2p 0.40.0-rc.1",
+ "libp2p 0.40.0",
  "libp2p-bitswap",
  "log",
  "multihash 0.13.2",
@@ -2918,7 +2918,7 @@ checksum = "2d38f1bec17d75a7c30b754cd74db6e7cb5927529021ced14fbd622411c04d8b"
 dependencies = [
  "fff 0.2.3",
  "rand 0.7.3",
- "rand_xorshift",
+ "rand_xorshift 0.2.0",
  "thiserror",
 ]
 
@@ -2930,7 +2930,7 @@ checksum = "7f6bb213b2bbd427227350f65bf092686dd2eb32aad337604e11b978881f1825"
 dependencies = [
  "fff 0.3.1",
  "rand 0.7.3",
- "rand_xorshift",
+ "rand_xorshift 0.2.0",
  "serde",
  "thiserror",
 ]
@@ -3639,10 +3639,10 @@ dependencies = [
  "libp2p-dns",
  "libp2p-floodsub",
  "libp2p-gossipsub",
- "libp2p-identify 0.31.0-rc.1",
+ "libp2p-identify 0.31.0",
  "libp2p-kad",
  "libp2p-mdns",
- "libp2p-metrics 0.1.0-rc.1",
+ "libp2p-metrics 0.1.0",
  "libp2p-mplex",
  "libp2p-noise",
  "libp2p-ping",
@@ -3651,8 +3651,8 @@ dependencies = [
  "libp2p-relay",
  "libp2p-rendezvous",
  "libp2p-request-response",
- "libp2p-swarm 0.31.0-rc.1",
- "libp2p-swarm-derive 0.25.0-rc.1",
+ "libp2p-swarm 0.31.0",
+ "libp2p-swarm-derive 0.25.0",
  "libp2p-tcp",
  "libp2p-uds",
  "libp2p-wasm-ext",
@@ -3672,10 +3672,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2ec5b70fc23ed1b1b1169ce0d1116260a343f67cf7088b498b8d99255cd68c32"
 dependencies = [
  "atomic",
- "bytes 1.0.1",
+ "bytes 1.1.0",
  "futures",
  "futures-timer",
- "getrandom 0.2.3",
+ "getrandom 0.2.4",
  "instant",
  "lazy_static",
  "libp2p-core",
@@ -3685,7 +3685,7 @@ dependencies = [
  "libp2p-swarm-derive 0.26.0",
  "multiaddr",
  "parking_lot",
- "pin-project 1.0.7",
+ "pin-project 1.0.10",
  "rand 0.7.3",
  "smallvec",
 ]
@@ -3698,7 +3698,7 @@ dependencies = [
  "async-std",
  "fnv",
  "futures",
- "libp2p 0.40.0-rc.1",
+ "libp2p 0.40.0",
  "log",
  "prost 0.8.0",
  "prost-build 0.8.0",
@@ -3777,7 +3777,7 @@ dependencies = [
  "fnv",
  "futures",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "prost 0.9.0",
  "prost-build 0.9.0",
@@ -3799,7 +3799,7 @@ dependencies = [
  "futures",
  "hex_fmt",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "prost 0.9.0",
  "prost-build 0.9.0",
@@ -3819,7 +3819,7 @@ checksum = "cca1275574183f288ff8b72d535d5ffa5ea9292ef7829af8b47dcb197c7b0dcd"
 dependencies = [
  "futures",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "lru 0.6.6",
  "prost 0.9.0",
@@ -3858,7 +3858,7 @@ dependencies = [
  "fnv",
  "futures",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "prost 0.9.0",
  "prost-build 0.9.0",
@@ -3884,7 +3884,7 @@ dependencies = [
  "if-watch",
  "lazy_static",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "rand 0.8.4",
  "smallvec",
@@ -3899,10 +3899,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4af432fcdd2f8ba4579b846489f8f0812cfd738ced2c0af39df9b1c48bbb6ab2"
 dependencies = [
  "libp2p-core",
- "libp2p-identify 0.31.0-rc.1",
+ "libp2p-identify 0.31.0",
  "libp2p-kad",
  "libp2p-ping",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "open-metrics-client",
 ]
 
@@ -3966,7 +3966,7 @@ checksum = "80ef7b0ec5cf06530d9eb6cf59ae49d46a2c45663bde31c25a12f682664adbcf"
 dependencies = [
  "futures",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "rand 0.7.3",
  "void",
@@ -4015,7 +4015,7 @@ dependencies = [
  "futures",
  "futures-timer",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "pin-project 1.0.10",
  "prost 0.9.0",
@@ -4037,7 +4037,7 @@ dependencies = [
  "bimap",
  "futures",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "prost 0.9.0",
  "prost-build 0.9.0",
@@ -4059,7 +4059,7 @@ dependencies = [
  "bytes 1.1.0",
  "futures",
  "libp2p-core",
- "libp2p-swarm 0.31.0-rc.1",
+ "libp2p-swarm 0.31.0",
  "log",
  "lru 0.7.2",
  "rand 0.7.3",
@@ -4117,8 +4117,8 @@ version = "0.26.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7dd93a7dad9b61c39797572e4fb4fdba8415d6348b4e745b3d4cb008f84331ab"
 dependencies = [
- "quote 1.0.9",
- "syn 1.0.73",
+ "quote 1.0.15",
+ "syn 1.0.86",
 ]
 
 [[package]]
@@ -5699,6 +5699,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "rand_xorshift"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d25bf25ec5ae4a3f1b92f929810509a2f53d7dca2f50b794ff57e3face536c8f"
+dependencies = [
+ "rand_core 0.6.3",
+]
+
+[[package]]
 name = "rawpointer"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5913,7 +5922,7 @@ dependencies = [
  "ipld_blockstore",
  "jsonrpc-v2",
  "key_management",
- "libp2p 0.40.0-rc.1",
+ "libp2p 0.40.0",
  "message_pool",
  "once_cell",
  "serde",
@@ -6114,6 +6123,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2cf9235533494ea2ddcdb794665461814781c53f19d87b76e571a1c35acbad2b"
 dependencies = [
  "serde_derive",
+]
+
+[[package]]
+name = "serde_bytes"
+version = "0.11.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "16ae07dd2f88a366f15bd0632ba725227018c69a1c8550a927324f8eb8368bb9"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
@@ -6579,7 +6597,7 @@ dependencies = [
  "forest_vm",
  "futures",
  "ipld_blockstore",
- "libp2p 0.40.0-rc.1",
+ "libp2p 0.40.0",
  "log",
  "num_cpus",
  "rayon",
