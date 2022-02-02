@@ -218,6 +218,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "23b62fc65de8e4e7f52534fb52b0f3ed04746ae267519eef2a83941e8085068b"
 
 [[package]]
+name = "arrayvec"
+version = "0.7.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8da52d66c7071e2e3fa2a1e5c6d088fec47b593032b254f5e980de8ea54454d6"
+
+[[package]]
 name = "asn1_der"
 version = "0.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -718,7 +724,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "afa748e348ad3be8263be728124b24a24f268266f6f5d58af9d75f6a40b5c587"
 dependencies = [
  "arrayref",
- "arrayvec",
+ "arrayvec 0.5.2",
+ "constant_time_eq",
+]
+
+[[package]]
+name = "blake2b_simd"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "72936ee4afc7f8f736d1c38383b56480b5497b4617b4a77bdbf1d2ababc76127"
+dependencies = [
+ "arrayref",
+ "arrayvec 0.7.2",
  "constant_time_eq",
 ]
 
@@ -729,7 +746,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9e461a7034e85b211a4acb57ee2e6730b32912b06c08cc242243c39fc21ae6a2"
 dependencies = [
  "arrayref",
- "arrayvec",
+ "arrayvec 0.5.2",
  "constant_time_eq",
 ]
 
@@ -740,7 +757,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b64485778c4f16a6a5a9d335e80d449ac6c70cdd6a06d2af18a6f6f775a125b3"
 dependencies = [
  "arrayref",
- "arrayvec",
+ "arrayvec 0.5.2",
  "cc",
  "cfg-if 0.1.10",
  "constant_time_eq",
@@ -982,7 +999,7 @@ dependencies = [
  "actor_interface",
  "async-std",
  "beacon",
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "byteorder 1.4.3",
  "crossbeam",
  "fil_clock",
@@ -1943,7 +1960,7 @@ dependencies = [
  "bellperson",
  "bincode",
  "bitvec",
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "blake2s_simd",
  "byte-slice-cast",
  "byteorder 1.4.3",
@@ -2454,7 +2471,7 @@ dependencies = [
 name = "forest_encoding"
 version = "0.2.2"
 dependencies = [
- "blake2b_simd",
+ "blake2b_simd 1.0.0",
  "forest_cid",
  "serde",
  "serde_bytes",
@@ -3585,7 +3602,7 @@ version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6607c62aa161d23d17a9072cc5da0be67cdfc89d3afb1e8d9c842bebc2525ffe"
 dependencies = [
- "arrayvec",
+ "arrayvec 0.5.2",
  "bitflags",
  "cfg-if 1.0.0",
  "ryu",
@@ -3851,7 +3868,7 @@ version = "0.32.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2297dc0ca285f3a09d1368bde02449e539b46f94d32d53233f53f6625bcd3ba"
 dependencies = [
- "arrayvec",
+ "arrayvec 0.5.2",
  "asynchronous-codec",
  "bytes 1.1.0",
  "either",
@@ -4469,7 +4486,7 @@ version = "0.1.0"
 dependencies = [
  "async-std",
  "async-trait",
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "chain",
  "fil_types",
  "forest_address",
@@ -4592,7 +4609,7 @@ version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4dac63698b887d2d929306ea48b63760431ff8a24fac40ddb22f9c7f49fb7cab"
 dependencies = [
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "digest",
  "generic-array",
  "multihash-derive",
@@ -4966,7 +4983,7 @@ version = "0.21.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "42fc2daf8d5a8e22a9833f798e72c0d6862b5f0288f0a2d289b37cd03fa5e283"
 dependencies = [
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "byteorder 1.4.3",
  "digest",
  "fff 0.2.3",
@@ -4980,7 +4997,7 @@ name = "paramfetch"
 version = "0.1.0"
 dependencies = [
  "async-std",
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "fil_types",
  "futures",
  "isahc",
@@ -6536,7 +6553,7 @@ dependencies = [
  "async-log",
  "async-std",
  "beacon",
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "byteorder 1.4.3",
  "chain",
  "fil_clock",
@@ -6711,7 +6728,7 @@ dependencies = [
  "aes 0.6.0",
  "anyhow",
  "bellperson",
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "blake2s_simd",
  "block-modes",
  "byteorder 1.4.3",
@@ -6789,7 +6806,7 @@ checksum = "d4a3fee3dc3785c4de204e797c3e64d8ec59a0ab93e743052dc2bbd323958c02"
 dependencies = [
  "anyhow",
  "bellperson",
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "blake2s_simd",
  "byteorder 1.4.3",
  "crossbeam",
@@ -7136,7 +7153,7 @@ version = "0.4.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "632824c586db700f0fab27c2cca5b6bd7bf8e49b1f8ddce77f736c9fbe9401f2"
 dependencies = [
- "blake2b_simd",
+ "blake2b_simd 0.5.11",
  "blake2s_simd",
  "digest",
  "generic-array",
